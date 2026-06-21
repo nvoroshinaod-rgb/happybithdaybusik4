@@ -301,7 +301,7 @@
             margin-top: 8px;
         }
 
-        /* ---------- КНОПКА "Чмока выдана" ---------- */
+        /* ---------- КНОПКА "Алга" ---------- */
         .btn-ready {
             font-family: 'Quicksand', 'Segoe UI', sans-serif;
             font-size: 2.2rem;
@@ -626,28 +626,29 @@
         <!-- ТЕКСТ НАВЕРХУ (смайлики убраны) -->
         <div class="greeting" id="greeting">
             <p>
-                Котятки очень старались, а Котя им подсказывала, даже зайчика Войковского запрягла 🐰.<br />
-                Думаем, что Коте полагается чмока 💋. Как только сделаешь, жми на кнопку 👇 и отвечай на следующий вопрос!
+                Сейчас ты, конечно, в отпуске, но придётся вспомнить коллег.<br />
+                У тебя есть такая особенность путать имена, давай проверим, запомнил ли ты имя одного из коллег))<br />
+                Жми на кнопку 👇 и отвечай на следующий вопрос!
             </p>
         </div>
 
         <!-- ЗОНА КВЕСТА -->
         <div class="quest-area">
 
-            <!-- КНОПКА "Чмока выдана" -->
-            <button class="btn-ready" id="btnReady">Чмока выдана</button>
+            <!-- КНОПКА "Алга" -->
+            <button class="btn-ready" id="btnReady">Алга</button>
 
             <!-- ВОПРОС -->
             <div class="question-text" id="questionText">
-                Что Надюше нельзя делать с бокалами?
+                Как зовут фембоя?
             </div>
 
             <!-- ВАРИАНТЫ ОТВЕТОВ -->
             <div class="options-grid" id="optionsGrid">
-                <button class="option-btn" data-index="0">Мыть</button>
-                <button class="option-btn" data-index="1">Пить из них</button>
-                <button class="option-btn" data-index="2">Покупать новые</button>
-                <button class="option-btn" data-index="3">Натирать</button>
+                <button class="option-btn" data-index="0">Костя</button>
+                <button class="option-btn" data-index="1">Серёжа</button>
+                <button class="option-btn" data-index="2">Дима</button>
+                <button class="option-btn" data-index="3">Артем</button>
             </div>
 
             <!-- ФИДБЕК -->
@@ -766,7 +767,7 @@
                     optionBtns.forEach(b => b.disabled = true);
                     btn.classList.add('correct');
                     showFeedback(
-                        'Да-да, всё так. Хихик) Следующий Qr-код ищи в гардеробной в спальне',
+                        'Хах, умничка! Вспомнил! Тогда ищи подсказку здесь же, она на одной из вешалок',
                         true
                     );
                     // Запускаем конфетти (взрыв хлопушки)
@@ -775,13 +776,13 @@
                     // Неправильный ответ
                     btn.classList.add('wrong');
                     showFeedback(
-                        'Подсказка: даже Ника это подметила, что в нашем доме нельзя бокалы ..., а то ...',
+                        'Подсказка: можно запросить помощь зала, например, у Коти',
                         false
                     );
                 }
             }
 
-            // ---------- ОБРАБОТЧИК КНОПКИ "Чмока выдана" ----------
+            // ---------- ОБРАБОТЧИК КНОПКИ "Алга" ----------
             function handleReadyClick() {
                 greeting.classList.add('hidden');
                 btnReady.classList.add('hidden');
